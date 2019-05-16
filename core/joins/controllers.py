@@ -23,8 +23,8 @@ class JoinController(viewsets.ModelViewSet):
     pagination_class = PagePagination
     queryset = Join.objects.all().filter(isDelete=False)
     filter_backends = [filters.SearchFilter,filters.OrderingFilter,DjangoFilterBackend]
-    search_fields = ['joinId','customerName','contact','pickupPoint','dropoffPoint','pikcupDate','pickupTime']
-    filter_fields = ['customerName','contactType','contact','pickupPoint','dropoffPoint','pickupDate','pickupTime','createdDate']
+    search_fields = ['joinId','customerName','contact','pickupPoint','dropoffPoint','firstPikcupDate','everyTime']
+    filter_fields = ['customerName','contactType','contact','pickupPoint','dropoffPoint','firstPikcupDate','everyTime','createdDate']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
