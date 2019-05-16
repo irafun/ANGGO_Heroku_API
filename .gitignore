@@ -1,6 +1,9 @@
-venv
+__pycache__/
 *.pyc
+.vscode/
+*.sqlite3
+pipfile.*
+pipfile
+info.txt
+*.sqlite3
 staticfiles
-.env
-db.sqlite3
-getting-started/*
